@@ -9,7 +9,7 @@ export default class Index extends Component {
       this.state = {business: []};
     }
     componentDidMount(){
-      axios.get('http://localhost:3004/posts')
+      axios.get('https://notestaking-json-server.herokuapp.com/posts')
         .then(response => {
           this.setState({ business: response.data });
         })

@@ -34,7 +34,7 @@ export default class Create extends Component {
       
     };
     //axios.post('http://localhost:4000/business/add', obj)
-    axios.post('http://localhost:3004/posts', obj)
+    axios.post('https://notestaking-json-server.herokuapp.com/posts', obj)
         .then(res => console.log(res.data));
     
     this.setState({

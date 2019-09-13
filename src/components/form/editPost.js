@@ -16,7 +16,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-      axios.get('http://localhost:3004/posts/'+this.props.match.params.id)
+      axios.get('https://notestaking-json-server.herokuapp.com/posts/'+this.props.match.params.id)
           .then(response => {
               this.setState({ 
                 title: response.data.title, 
@@ -49,7 +49,7 @@ export default class Edit extends Component {
       description: this.state.description
       
     };
-    axios.put('http://localhost:3004/posts/'+this.props.match.params.id, obj)
+    axios.put('https://notestaking-json-server.herokuapp.com/posts/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
         this.props.history.push('/index');
     

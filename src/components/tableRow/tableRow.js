@@ -23,7 +23,7 @@ class TableRow extends Component {
       
     delete() {
       //alert(this.props.obj.id);
-           axios.delete('http://localhost:3004/posts/'+this.props.obj.id)
+           axios.delete('https://notestaking-json-server.herokuapp.com/posts/'+this.props.obj.id)
             .then(console.log('Deleted'))
             .catch(err => console.log(err));
            
